@@ -1,11 +1,13 @@
 name: Deploy Dist
-on: [push,Workflow_dispatch]
+on: [push, workflow_dispatch]
+
 jobs:
-    test:
-        runs-on: windows-latest
-        steps:
-            - name:  Get Code
-              run: |
-                echo "cloning repo..."
-                echo "${{toJson(github)}}"
-                git clone https://github.com/${{github.repository}}.git
+  test:
+    runs-on: windows-latest
+    steps:
+      - name: Get Code
+        run: |
+          echo "cloning repo..."
+          echo "${{ toJson(github) }}"
+          git clone https://github.com/${{ github.repository }}.git
+        shell: bash
