@@ -3,6 +3,7 @@ import { render, screen } from '@testing-library/react';
 import { describe, test, expect } from 'vitest'
 import App from './App';
 
+// this is a comment
 test('renders Github Actions heading', () => {
   render(<App />);
   const headingElement = screen.getByText(/Github Actions/i);
